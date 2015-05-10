@@ -1,3 +1,10 @@
 .DS_Store
+*.orig
 *~
 *.swp
+
+# Contain files with personal notes that shouldn't be added to the repository
+*.personal.md
+
+# Ignore IntelliJ IDEA project files
+.idea/
