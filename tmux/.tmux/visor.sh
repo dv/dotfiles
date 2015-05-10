@@ -3,7 +3,7 @@
 # Start three horizontally split panes. Useful for new sessions in TotalTerminal.
 # To use in TotalTerminal, edit the Visor Terminal.app profile, and set the command to:
 #
-#   /usr/local/bin/tmux start-server \; source-file ~/.tmux/visor.sh
+#   /usr/local/bin/tmux start-server; source-file /Users/david/.tmux/visor.sh
 #
 # Uncheck "Run inside shell" for faster bootup
 
