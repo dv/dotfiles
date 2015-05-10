@@ -12,9 +12,9 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   co = checkout
   promote = !$ZSHDOT/bin/git-promote
-  wtf     = !$ZSHDOT/bin/git-wtf
+  wtf = !$ZSHDOT/bin/git-wtf
   rank-contributors = !$ZSHDOT/bin/git-rank-contributors
-  count   = !git shortlog -sn
+  count = !git shortlog -sn
 
 [push]
   default = simple
