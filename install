@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Run all dotfiles installers.
+# Run all install.sh files. Current dir is set to `dotfiles/`
 
 set -e
 
