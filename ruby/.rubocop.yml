@@ -1,0 +1,5 @@
+Style/AccessModifierIndentation:
+  EnforcedStyle: outdent
+  SupportedStyles:
+    - outdent
+    - indent
