@@ -10,6 +10,8 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 IRB.conf[:AUTO_INDENT] = true
 
+IRB.conf[:BACK_TRACE_LIMIT]=6
+
 class Object
   # list methods which aren't in superclass
   def local_methods(obj = self)
