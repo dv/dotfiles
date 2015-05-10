@@ -108,13 +108,13 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' )
+  for src in $(find -H "$DOTFILES_ROOT" -mindepth 2 -name '*.symlink' )
   do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
 
-  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '.*' )
+  for src in $(find -H "$DOTFILES_ROOT" -mindepth 2 -name '.*' )
   do
     dst="$HOME/$(basename $src)"
     link_file "$src" "$dst"
