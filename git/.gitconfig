@@ -1,0 +1,52 @@
+[hub]
+  protocol = https
+
+[user]
+  name = David Verhasselt
+  email = david@crowdway.com
+
+[credential]
+  helper = osxkeychain
+
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  co = checkout
+  promote = !$ZSHDOT/bin/git-promote
+  wtf     = !$ZSHDOT/bin/git-wtf
+  rank-contributors = !$ZSHDOT/bin/git-rank-contributors
+  count   = !git shortlog -sn
+
+[push]
+  default = simple
+
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+
+[core]
+  excludesfile = ~/.gitignore
+
+[mergetool]
+  keepBackup = true
+
+[difftool "Kaleidoscope"]
+[difftool]
+[diff]
+  tool = Kaleidoscope
+
+[mergetool "Kaleidoscope"]
+  trustexitcode = true
+
+[merge]
+  tool = Kaleidoscope
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+  prompt = false
+
+[mergetool]
+  prompt = false
