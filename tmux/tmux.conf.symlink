@@ -1,0 +1,58 @@
+# Set Tmux prefix to CTRL+S
+unbind C-b
+set -g prefix C-s
+
+# Vim keys in COPY and CHOICE mode
+set-window-option -g mode-keys vi
+
+# Use emacs in tmux status bar
+set-option -g status-keys "emacs"
+
+# Key bindings to navigate panes without prefix (Vim directional)
+bind-key -n C-h select-pane -L
+bind-key -n C-j select-pane -D
+bind-key -n C-k select-pane -U
+bind-key -n C-l select-pane -R
+
+# Fancy colours
+set-option -g default-terminal "screen-256color"
+
+# Set color of tmux status bar
+set -g status-bg '#666666'
+set -g status-fg '#aaaaaa'
+
+# Allow 50 chars in left status
+set -g status-left-length 50
+
+# Show current pane in right status
+set-option -g status-right "pane:#P"
+
+# - (dash) splits pane vertical
+# | (pipe) splits pane horizontal
+bind-key - split-window -v -c '#{pane_current_path}'
+bind-key \ split-window -h -c '#{pane_current_path}'
+
+# If run as "tmux attach", create a session if one does not already exist
+new-session -n $HOST
+
+# Lower escape timing from 500ms to 50ms for quicker response to scroll-buffer access.
+set -s escape-time 50
+
+# Mouse support for scrolling
+# -> Install EasySIMBL and MouseTerm to support Terminal.app
+
+## Mouse support in Tmux HEAD
+set-option -g mouse on
+
+### Start copy mode when scrolling up
+bind -n WheelUpPane copy-mode
+
+### Enable our custom option to exit copy mode when scrolling past bottom
+### Requires our custom patch
+set-window-option -g exit-copy-past-bottom on
+
+## Mouse support in Tmux 1.9+
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
