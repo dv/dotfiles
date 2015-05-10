@@ -3,6 +3,8 @@
 ## Changes from "holman does dotfiles"
 
 * Move `script/` files into root directory, a place I feel is better suited for the meta-ness of these scripts
+* `script/bootstrap` also symlinks files starting with "." into $HOME as well as files ending with ".symlink"
+
 ## dotfiles
 
 Your dotfiles are how you personalize your system. These are mine.
