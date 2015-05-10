@@ -1,5 +1,6 @@
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
+export PROJECTS=~/poetry
+
 # shortcut to this dotfiles path is $DOTFILES_ROOT
 export DOTFILES_ROOT=$PROJECTS/dotfiles
 
