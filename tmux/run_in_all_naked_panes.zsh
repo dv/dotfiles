@@ -15,7 +15,6 @@
 #
 #    alias tclear="run_in_all_naked_panes clear"
 #
-# Heavily modified from https://gist.github.com/deshawnbw/2773454
 
 function run_in_all_naked_panes {
 
