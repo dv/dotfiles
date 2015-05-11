@@ -1,9 +1,12 @@
-# holman does dotfiles
+# david does dotfiles, too
+
+Forked from "holman does dotfiles", these are my personal dotfiles.
 
 ## Changes from "holman does dotfiles"
 
-* Move `script/` files into root directory, a place I feel is better suited for the meta-ness of these scripts
-* `script/bootstrap` also symlinks files starting with "." into $HOME as well as files ending with ".symlink"
+* Move `script/` files into root directory, a place I feel is better suited for the metaness of these scripts
+* `script/bootstrap` also symlinks files starting with "." into $HOME as well as files ending with ".symlink".
+  This way I can keep the original name of the files, enabling proper syntax highlighting.
 
 ## dotfiles
 
@@ -24,9 +27,9 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 Run this:
 
 ```sh
-git clone https://github.com/holman/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-script/bootstrap
+git clone https://github.com/dv/dotfiles.git ~/poetry/dotfiles
+cd ~/poetry/dotfiles
+./bootstrap
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
@@ -45,15 +48,9 @@ this script in `bin/`.
 Everything's built around topic areas. If you're adding a new area to your
 forked dotfiles — say, "Java" — you can simply add a `java` directory and put
 files in there. Anything with an extension of `.zsh` will get automatically
-included into your shell. Anything with an extension of `.symlink` will get
-symlinked without extension into `$HOME` when you run `script/bootstrap`.
-
-## what's inside
-
-A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
-above and see what components may mesh up with you.
-[Fork it](https://github.com/holman/dotfiles/fork), remove what you don't
-use, and build on what you do use.
+included into your shell. Anything that starts with a dot, or has an extension
+of `.symlink` will get symlinked without extension into `$HOME` when you run
+`script/bootstrap`.
 
 ## components
 
@@ -72,16 +69,15 @@ There's a few special files in the hierarchy.
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
 
-## bugs
+# Tmux
 
-I want this to work for everyone; that means when you clone it down it should
-work for you even though you may not have `rbenv` installed, for example. That
-said, I do use this as *my* dotfiles, so there's a good chance I may break
-something if I forget to make a check for a dependency.
+## `run_in_all_naked_panes command`
 
-If you're brand-new to the project and run into any blockers, please
-[open an issue](https://github.com/holman/dotfiles/issues) on this repository
-and I'd love to get it fixed for you!
+Runs the command in all panes in Tmux, that are not currently running a process (except for a shell).
+
+## `tclear`
+
+Clears all panes in Tmux except for the ones running a process (except for a shell)
 
 ## thanks
 
