@@ -31,15 +31,16 @@ function run_in_all_naked_panes {
 
   }
 
-  # Note which pane we were originally at
-  original_pane=$(tmux display-message -p '#P')
-
   # Assign the argument to something readable
   command=$1
 
-  # Run in current shell too if we're in a Tmux pane
+  # If we're in a Tmux pane
   if [[ -n $TMUX_PANE ]]
   then
+    # Note which pane we were originally at
+    original_pane=$(tmux display-message -p '#P')
+
+    # Run in this pane too
     $command
   fi
 
@@ -47,7 +48,7 @@ function run_in_all_naked_panes {
   tmux list-panes -F '#{pane_index}:#{pane_pid}' | while IFS=':' read pane pid; do
     # Don't run the command in the current pane if we are in a Tmux pane,
     # because we would've run the command already above.
-    if [[ $original_pane != $pane || -z $TMUX_PANE ]]; then
+    if [[ $original_pane != $pane ]]; then
       run_if_naked_shell $pane $pid $command
     fi
   done
