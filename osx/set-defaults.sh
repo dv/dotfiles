@@ -42,3 +42,6 @@ defaults write NSGlobalDomain NSUserKeyEquivalents -dict "Paste and Match Style"
 
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
+
+# Restart automatically if the computer freezes
+sudo systemsetup -setrestartfreeze on
