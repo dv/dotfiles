@@ -45,3 +45,10 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
+
+# Make CMD-F in Finder to start "Find by filename"
+defaults write com.apple.finder NSUserKeyEquivalents -dict "Find by Name..." -string "@f"
+
+# Make new windows in Finder start up to my home path
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+deafults write com.apple.finder NewWindowTargetPath -string "file:///Users/david/"
