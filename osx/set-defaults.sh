@@ -51,4 +51,16 @@ defaults write com.apple.finder NSUserKeyEquivalents -dict "Find by Name..." -st
 
 # Make new windows in Finder start up to my home path
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
-deafults write com.apple.finder NewWindowTargetPath -string "file:///Users/david/"
+defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/david/"
+
+# Autohide Dock
+defaults write com.apple.dock autohide -bool true
+
+# Remove Dock hide/show delay
+defaults write com.apple.dock autohide-delay -float 0
+
+# Shorten Dock hide/show animation
+defaults write com.apple.dock autohide-time-modifier -float 0.2
+
+# Restart Dock
+killall Dock
