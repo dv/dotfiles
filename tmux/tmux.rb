@@ -3,8 +3,9 @@
 require 'formula'
 
 class Tmux < Formula
+  version "2.1"
   homepage 'http://tmux.sourceforge.net'
-  url 'git://git.code.sf.net/p/tmux/tmux-code'
+  url 'https://github.com/tmux/tmux.git', using: :git
   patch do
     url "https://github.com/dv/tmux/commit/19448c5a17f6a44ad52a2858fd40acd4b4e5aeed.patch"
     sha256 "f8f4358cecbc99161640b7db008ef93510267c9fb927064679bd9220df8521e6"
