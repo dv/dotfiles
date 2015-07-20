@@ -13,4 +13,4 @@ alias rgrep="bundle exec rake routes | grep"
 alias remigrate="bundle exec rake db:migrate && bundle exec rake db:rollback && bundle exec rake db:migrate"
 
 # Open all generated files in Sublime
-alias rg="~/scripts/sublime/rails_g_and_open.rb"
+alias rg="$DOTFILES_ROOT/ruby/rails_g_and_open.rb"
