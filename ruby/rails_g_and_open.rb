@@ -3,10 +3,15 @@
 require 'pty'
 
 def extract_created_files(lines)
-  lines.map do |line|
+  created_items = lines.map do |line|
     command, file = colorless(line).split
     file if command == "create"
-  end.compact.reverse
+  end.compact
+
+  created_files =
+    created_items.reject { |file| File.directory?(file) }
+
+  created_files.reverse
 end
 
 def colorless(str)
