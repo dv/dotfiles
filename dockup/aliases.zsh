@@ -1,0 +1,6 @@
+alias dockup="source ~/scripts/docker-vagrant-parallels/up.sh"
+alias dockdown="~/scripts/docker-vagrant-parallels/down.sh"
+alias dockhalt="~/scripts/docker-vagrant-parallels/halt.sh"
+alias dockssh="~/scripts/docker-vagrant-parallels/ssh.sh"
+alias dockrun="docker-compose run --rm --service-ports web"
+alias dockbe="dockrun bundle exec"
