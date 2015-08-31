@@ -15,4 +15,7 @@ fi
 # Install homebrew packages
 brew install grc coreutils spark
 
+# Development utils
+brew install pup httpie jq moreutils
+
 exit 0
