@@ -6,6 +6,10 @@
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 #
 # Run ./set-defaults.sh and you'll be good to go.
+#
+# A nice GUI to check settings can be found here:
+#   http://apps.tempel.org/PrefsEditor
+#
 
 # Enable press-and-hold for keys, removing key repeat, for
 # easy accented characters.
@@ -64,3 +68,8 @@ defaults write com.apple.dock autohide-time-modifier -float 0.2
 
 # Restart Dock
 killall Dock
+
+# Map caps-lock to ctrl (needs restart)
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.alt_handler_id-50 -array "<dict><key>HIDKeyboardModifierMappingDst</key><integer>2</integer><key>HIDKeyboardModifierMappingSrc</key><integer>0</integer></dict>"
+
+echo "  Set up OSX settings. Some settings might need a restart to take effect."
