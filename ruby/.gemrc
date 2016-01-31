@@ -4,3 +4,4 @@
 :backtrace: false
 :benchmark: false
 gem: --no-document --no-ri --no-rdoc
+install: --with-cppflags=-I/usr/local/opt/openssl/include
