@@ -1,0 +1,29 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ApplySyntax",
+		"Babel",
+		"Better CoffeeScript",
+		"BracketHighlighter",
+		"eco",
+		"EJS",
+		"LESS",
+		"Markdown Extended",
+		"Package Control",
+		"RailsGoToSpec",
+		"Ruby Markers",
+		"Ruby Slim",
+		"Sass",
+		"SassBeautify",
+		"SublimeLinter",
+		"SublimeLinter-contrib-scss-lint",
+		"SublimeLinter-rubocop",
+		"SublimeLinter-ruby",
+		"Table Editor",
+		"Theme - SoDaReloaded"
+	]
+}

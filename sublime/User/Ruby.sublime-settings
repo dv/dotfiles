@@ -1,0 +1,15 @@
+{
+	"detect_indentation": false,
+	"extensions":
+	[
+		"thor",
+		"podspec",
+		"simplecov",
+		"jbuilder",
+		"rb",
+		"rake",
+		"rabl"
+	],
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true
+}
