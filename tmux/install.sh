@@ -3,5 +3,5 @@
 if test ! $(which tmux)
 then
   echo "  Installing tmux for you."
-  brew install tmux/tmux.rb reattach-to-user-namespace > /tmp/tmux-install.log
+  brew install tmux reattach-to-user-namespace > /tmp/tmux-install.log
 fi
