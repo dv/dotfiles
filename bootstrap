@@ -116,8 +116,11 @@ install_dotfiles () {
 
   for src in $(find -H "$DOTFILES_ROOT" -mindepth 2 -name '.*' )
   do
-    dst="$HOME/$(basename $src)"
-    link_file "$src" "$dst"
+    if [ "$(basename $src)" != ".DS_Store" ]
+    then
+      dst="$HOME/$(basename $src)"
+      link_file "$src" "$dst"
+    fi
   done
 }
 
