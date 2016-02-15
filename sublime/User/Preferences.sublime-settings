@@ -9,5 +9,6 @@
 	"theme": "SoDaReloaded Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
+	"ensure_newline_at_eof_on_save": true,
 	"vintageous_reset_mode_when_switching_tabs": false
 }
