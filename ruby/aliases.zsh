@@ -14,3 +14,6 @@ alias remigrate="bundle exec rake db:migrate && bundle exec rake db:rollback && 
 
 # Open all generated files in Sublime
 alias rg="$DOTFILES_ROOT/ruby/rails_g_and_open.rb"
+
+# Start foreman using Procfile.personal
+alias pfore="foreman start -f Procfile.personal"
