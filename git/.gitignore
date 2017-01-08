@@ -6,6 +6,7 @@
 # Contain files with personal notes that shouldn't be added to the repository
 *.personal.md
 *.personal
+*.personal.rb
 
 # Ignore IntelliJ IDEA project files
 .idea/
