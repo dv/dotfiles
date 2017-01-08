@@ -3,3 +3,5 @@ Style/AccessModifierIndentation:
   SupportedStyles:
     - outdent
     - indent
+Style/Documentation:
+  Enabled: false
