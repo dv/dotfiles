@@ -51,4 +51,4 @@
 [mergetool]
   prompt = false
 [rerere]
-	enabled = 1
+	enabled = true
