@@ -1,0 +1,18 @@
+#!/bin/zsh
+# From https://stackoverflow.com/questions/18215389/how-do-i-measure-request-and-response-times-at-once-using-curl
+# - Use read to output heredoc stream into the $OutputFormat variable
+# - Add "IFS=" to not remove leading and trailing whitespace
+IFS= read -d '' OutputFormat <<"EOF"
+    time_namelookup:  %{time_namelookup}s
+       time_connect:  %{time_connect}s
+    time_appconnect:  %{time_appconnect}s
+   time_pretransfer:  %{time_pretransfer}s
+      time_redirect:  %{time_redirect}s
+ time_starttransfer:  %{time_starttransfer}s
+                    -----------
+         time_total:  %{time_total}s
+
+
+EOF
+
+curl -w $OutputFormat -o /dev/null -s "$1"
