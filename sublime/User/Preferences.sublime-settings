@@ -9,6 +9,15 @@
 	"theme": "SoDaReloaded Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"ensure_newline_at_eof_on_save": true,
-	"vintageous_reset_mode_when_switching_tabs": false
+	"vintageous_reset_mode_when_switching_tabs": false,
+
+  // These files will still show up in the side bar, but won't be included in
+  // Goto Anything or Find in Files
+	"binary_file_patterns": [
+		// Defaults
+		"*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip",
+
+		// Custom additions
+		"node_modules/", "tmp/", "*.js.map", "vendor/bin/"
+	]
 }
