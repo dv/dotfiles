@@ -17,5 +17,13 @@ brew install grc coreutils spark openssl
 
 # Development utils
 brew install pup httpie jq moreutils
+brew install Caskroom/cask/licecap # GIF recorder
+brew install graphicsmagick
+
+# Install patched ansible
+for filename in $(find -H "$DOTFILES_ROOT/homebrew/formulae" -name '*.rb' )
+do
+  brew install file://$filename
+done
 
 exit 0
