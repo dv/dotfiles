@@ -1,15 +1,27 @@
-class AnsibleWithPatch < Formula
+class Ansible < Formula
   include Language::Python::Virtualenv
 
-  version "1.0"
-  desc "Automate deployment, configuration, and upgrading"
+  version "2.6"
+  desc "Ansible but with a patch applied to support a simplified directory structure."
   homepage "https://www.ansible.com/"
-  url "https://github.com/ansible/ansible.git", branch: :devel, using: :git
+  url "https://github.com/ansible/ansible.git", branch: "stable-2.6", using: :git
 
   patch do
+    #
+    # Patch by https://groups.google.com/d/msg/ansible-devel/BfHRSzsq9d0/cfXi5oxHAQAJ
+    #
+    # Adds support for a simplified directory structure in `roles/`
+    # i.e. use `roles/dnsmasq/tasks.yml` instead of `roles/dnsmask/tasks/main.yml`
+    #
     url "https://github.com/dv/ansible/commit/56f89b6b7bcb8025d49a6e4cd325f99aa867bf8d.patch"
     sha256 "377cbc3f7a97506cc3f458ba596715de189ffc26df4525887764415c397284c6"
   end
+
+  head do
+    url "https://github.com/ansible/ansible.git", branch: :devel, using: :git
+  end
+
+  # Everything below here comes from the original Ansible formula
 
   depends_on "pkg-config" => :build
   depends_on "libyaml"
