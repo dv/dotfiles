@@ -20,6 +20,10 @@ brew install pup httpie jq moreutils
 brew install Caskroom/cask/licecap # GIF recorder
 brew install graphicsmagick
 
+# For nokogiri gem
+brew install libiconv libxml2 libxslt
+brew link --force libxml2
+
 # Install patched ansible
 for filename in $(find -H "$DOTFILES_ROOT/homebrew/formulae" -name '*.rb' )
 do
