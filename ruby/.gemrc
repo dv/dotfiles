@@ -3,5 +3,5 @@
 :verbose: true
 :backtrace: false
 :benchmark: false
-gem: --no-document --no-ri --no-rdoc
+gem: --no-document --no-ri --no-rdoc --with-cppflags="-I/usr/local/opt/openssl/include"
 install: --with-cppflags=-I/usr/local/opt/openssl/include
