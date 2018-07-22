@@ -26,6 +26,41 @@ Runs the command in all panes in Tmux, that are not currently running a process 
 
 Clears all panes in Tmux except for the ones running a process (except for a shell)
 
+## Ansible
+
+Ansible's default directory structure is too verbose to my liking. I built a custom homebrew formula to integrate the patch sourced from [here](https://groups.google.com/forum/#!searchin/ansible-devel/directory%2420structure%7Csort:date/ansible-devel/BfHRSzsq9d0/cfXi5oxHAQAJ) to allow files with the directory-name instead.
+
+Before:
+
+```
+roles/dnsmasq/
+├── defaults
+│   └── main.yml
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── tasks
+│   └── main.yml
+└── templates
+    ├── dns.conf.j2
+    ├── logrotate.j2
+    └── supervisord.j2
+```
+
+After:
+```
+roles/dnsmasq/
+├── defaults.yml
+├── handlers.yml
+├── meta.yml
+├── tasks.yml
+└── templates
+    ├── dns.conf.j2
+    ├── logrotate.j2
+    └── supervisord.j2
+```
+
 ## Install
 
 Run this:
