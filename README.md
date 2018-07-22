@@ -61,6 +61,43 @@ roles/dnsmasq/
     └── supervisord.j2
 ```
 
+
+## known
+
+`known` is a tool I built to easily remove a host from `.ssh/known_hosts` after you know that tis key changed.
+
+Use as follows:
+
+```
+› ssh sandcrawler.crowdway.com
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:+9nZWr9tcMA6TRckj+w6t9FWoK9/CtdamWZhzg98h+8.
+Please contact your system administrator.
+Add correct host key in /Users/david/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /Users/david/.ssh/known_hosts:34
+ECDSA host key for sandcrawler.crowdway.com has changed and you have requested strict checking.
+Host key verification failed.
+
+› known
+Removing sandcrawler.crowdway.com from known_hosts
+
+# Host sandcrawler.crowdway.com found: line 34
+/Users/david/.ssh/known_hosts updated.
+Original contents retained as /Users/david/.ssh/known_hosts.old
+
+› ssh sandcrawler.crowdway.com
+The authenticity of host 'sandcrawler.crowdway.com (176.9.19.183)' can't be established.
+ECDSA key fingerprint is SHA256:+9nZWr9tcMA6TRckj+w6t9FWoK9/CtdamWZhzg98h+8.
+Are you sure you want to continue connecting (yes/no)?
+```
+
 ## Install
 
 Run this:
