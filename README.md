@@ -16,6 +16,10 @@ Forked from "holman does dotfiles", these are my personal dotfiles.
 
 Rails generator which opens all generated files in Sublime.
 
+### `dkc`
+
+Runs `rails c` on remote server of the current dokku app repository. Requires gem `dokku-cli` to be installed (locally).
+
 ## Tmux
 
 ### `run_in_all_naked_panes command`
@@ -64,7 +68,7 @@ roles/dnsmasq/
 
 ## known
 
-`known` is a tool I built to easily remove a host from `.ssh/known_hosts` after you know that tis key changed.
+`known` is a tool I built to easily remove a host from `.ssh/known_hosts` after you know that its key changed.
 
 Use as follows:
 
