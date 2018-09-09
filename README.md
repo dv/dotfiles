@@ -115,6 +115,12 @@ cd ~/poetry/dotfiles
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 
+Then run this:
+
+```sh
+./install
+```
+
 The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
 which sets up a few paths that'll be different on your particular machine.
 
@@ -148,3 +154,8 @@ There's a few special files in the hierarchy.
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
+
+## Sources
+
+- Inspiration on keymapping http://stevelosh.com/blog/2012/10/a-modern-space-cadet/ (thanks for the introduction @cedricpim!)
+
