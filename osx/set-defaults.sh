@@ -42,7 +42,8 @@ defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.Web
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Make CMD-V paste without formatting
-defaults write NSGlobalDomain NSUserKeyEquivalents -dict "Paste and Match Style" -string "@v"
+# defaults write NSGlobalDomain NSUserKeyEquivalents -dict "Paste and Match Style" -string "@v"
+defaults write NSGlobalDomain NSUserKeyEquivalents -dict "Paste" -string "@v"
 
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
