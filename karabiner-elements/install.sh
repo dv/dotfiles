@@ -3,7 +3,7 @@
 rm -f ~/.config/karabiner
 ln -s $DOTFILES_ROOT/karabiner-elements/config ~/.config/karabiner
 
-if test ! $(which karabiner-elements)
+if ! brew cask ls --versions karabiner-elements 2>/dev/null >/dev/null
 then
   echo "  Installing karabiner-elements for you."
   brew cask install karabiner-elements > /tmp/karabiner-elements-install.log
