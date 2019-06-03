@@ -52,3 +52,5 @@
   prompt = false
 [rerere]
 	enabled = true
+[rebase]
+	autoStash = true
